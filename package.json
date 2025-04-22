@@ -1,0 +1,26 @@
+{
+  "name": "task_tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "jest --forceExit",
+    "start": "nodemon index.ts",
+    "build": "npx tsc",
+    "lint": "eslint --ext .js, .ts . && echo 'Linting Successful'",
+    "lint:fix": "eslint --ext .js, .ts . --fix && echo 'Linting Fix Successful'",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
