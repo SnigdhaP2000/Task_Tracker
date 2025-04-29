@@ -12,7 +12,7 @@ async function getParam(name: string): Promise<string> {
   return res.Parameter?.Value || "";
 }
 
-export async function connectToDB() {
+export async function connectToDB(dbName: string){
   const [host, port, user, password, database] = await Promise.all([
     getParam("/tasktracker/db/host"),
     getParam("/tasktracker/db/port"),
@@ -25,7 +25,7 @@ export async function connectToDB() {
     port: parseInt(port),
     user,
     password,
-    database:"task_tracker",
+    database:dbName,
     ssl: {
       rejectUnauthorized: false,
     },
