@@ -203,7 +203,7 @@ export default class TaskService {
                                             GROUP BY 
                                             types.typname`);
         message = 'Filters fetched successfully';
-        return {message, data: [result.rows]};
+        return {message, data: [result.rows][0]};
     }
 
 }
