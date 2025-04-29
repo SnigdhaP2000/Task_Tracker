@@ -7,15 +7,21 @@ const taskController = new TaskController();
 
 router.get('/healthcheck', tenantMiddleware, taskController.healthCheck);
 
-// Example route to get all tasks
+// route to get all tasks
 router.get('/tasks', tenantMiddleware, taskController.tasks);
+router.get('/task/comments', tenantMiddleware, taskController.taskComments);
+router.get('/task/filters', tenantMiddleware, taskController.taskFilters);
 
-// Example route to create a new task
+// route to create a new task
 router.post('/tasks', tenantMiddleware, taskController.tasks);
+router.post('/task/comments', tenantMiddleware, taskController.taskComments);
 
-// Example route to update a task
+// route to update a task
 router.patch('/tasks', tenantMiddleware, taskController.tasks);
+router.patch('/task/comments', tenantMiddleware, taskController.taskComments);
 
-// Example route to delete a task
+// route to delete a task
 router.delete('/tasks', tenantMiddleware, taskController.tasks);
+router.delete('/task/comments', tenantMiddleware, taskController.taskComments);
+
 export default router;
