@@ -5,7 +5,7 @@ const port = 3001;
 
 app.use(express.json());
 
-app.use("/api", taskRoutes);
+app.use("/", taskRoutes);
 
 app.listen(port, ()=>{
     console.log(`task tracker server running on port ${port}`)
