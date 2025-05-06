@@ -41,12 +41,3 @@ This collection includes:
 - Environment variables for quick setup and reuse
 
 Import the collection into Postman to start testing the full flow from user login to task management.
-
-
-src/
-│
-├── routes/ # Defines all API routes
-├── controllers/ # Handles request logic
-├── middleware/ # Auth, logging, error handling
-├── services/ # Business logic and DB queries
-└── utils/ # Utility functions (e.g., DB connection, token helpers)
